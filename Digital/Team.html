@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team and Moments</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ebebf5;
+    }
+    
+    .logo {
+        width: 50px;
+    }
+    
+    .nav-link {
+        color: #007bff;
+        margin-left: 20px;
+        text-decoration: none;
+    }
+    
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+    
+    .section-title {
+        color: #1E319E;
+        font-size: 35px;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        letter-spacing: 0.40px;
+        margin-bottom: 30px;
+    }
+    
+    .title-section {
+        color: #1E319E;
+        font-size: 35px;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        letter-spacing: 0.40px;
+        margin-bottom: 30px;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    
+    .swiper-slide {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    img.rounded-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .swiper-pagination,
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+    }
+    
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        content: '';
+    }
+    
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        content: '';
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 10px;
+    }
+    
+    .swiper-button-prev {
+        background-image: url('assets/prev.png');
+    }
+    
+    .swiper-button-next {
+        background-image: url('assets/next.png');
+    }
+    
+    .swiper-pagination-bullet {
+        width: 13px;
+        height: 13px;
+        display: inline-block;
+        background-color: #AEAEB2;
+        border-radius: 10px;
+        margin: 0 5px;
+        opacity: 0.9;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background-color: #1E319E;
+    }
+    
+    .video-container {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .video-thumbnail {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .play-button {
+        background-color: white;
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        padding: 15px;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    
+    .progress {
+        height: 5px;
+        margin-top: 10px;
+    }
+    
+    .iframe-container {
+        display: none;
+        width: 100%;
+        height: 315px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+        }
+        .swiper-container {
+            padding-bottom: 20px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center py-3">
+            <a href="Index.html"><img src="assets/Stanbic Logo.png" alt="Logo" class="logo"></a>
+
+            <div class="d-flex">
+                <a href="#" class="nav-link">The Team</a>
+                <a href="Chatbot.html" class="nav-link">Chatbot Stella</a>
+            </div>
+        </header>
+
+        <section class="text-center mt-5">
+            <h2 class="section-title">Meet The Stellars</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Ruth Peters</h5>
+                                <p>Cybersecurity</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">John Doe</h5>
+                                <p>Software Engineer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Jane Smith</h5>
+                                <p>Data Scientist</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Emily Davis</h5>
+                                <p>Product Manager</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Michael Brown</h5>
+                                <p>UI/UX Designer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Sarah Wilson</h5>
+                                <p>DevOps Engineer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">David Lee</h5>
+                                <p>Marketing Specialist</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Laura Green</h5>
+                                <p>HR Manager</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Chris White</h5>
+                                <p>QA Engineer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Jessica Brown</h5>
+                                <p>Graphic Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-6 mb-4 team-member">
+                                <img src="assets/profile.png" alt="Team Member" class="img-fluid rounded-circle">
+                                <h5 class="mt-2">Alice Thompson</h5>
+                                <p>Backend Developer</p>
+                            </div>
+
+
+                            <!-- Add more team members here -->
+                        </div>
+                    </div>
+                    <!-- End of Slide -->
+                </div>
+            </div>
+            <!-- Add Navigation and Pagination -->
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination mx-2"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section class="text-center mt-5 mb-5">
+            <h2 class="title-section">Our Moments At The Blue<br> Academy</h2>
+            <div class="video-container mx-auto">
+                <img src="assets/play.png" alt="Thumbnail" class="video-thumbnail mb-2" id="thumbnail">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
+                </div>
+                <div class="play-button" id="playButton">
+                    <svg width="24" height="24" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                        <path d="M11.596 8.697l-6.363 3.692A.5.5 0 0 1 4.5 12V4a.5.5 0 0 1 .733-.441l6.363 3.692a.5.5 0 0 1 0 .846z"/>
+                    </svg>
+                </div>
+                <iframe class="iframe-container" id="videoIframe" src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var iframe = document.getElementById('videoIframe');
+            var thumbnail = document.getElementById('thumbnail');
+            var playButton = document.getElementById('playButton');
+            var progressBar = document.getElementById('progressBar');
+
+            thumbnail.style.display = 'none';
+            playButton.style.display = 'none';
+            iframe.style.display = 'block';
+
+            var width = 0;
+            var interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                }
+            }, 100);
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 1,
+                        spaceBetween: 40,
+                    },
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
